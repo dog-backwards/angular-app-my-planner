@@ -6,15 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'Lista zadań';
+  title = 'MyPlanner';
 
 // Metoda Angulara
   getFooter(): string {
-    return '2020 © Lista zadań.';
+    return '2020 © MyPlanner application.';
   }
 
 // Metoda Typescript
   get footer2(): string {
-    return 'All rights reserved';
+    return 'Created by Patryk Pesta. All rights reserved';
   }
 }
