@@ -6,6 +6,7 @@
 	</nav>
 
 	<div class="row">
+    {{ getDate() | date: 'fullDate':'':'pl' }}
 		<button class="btn col s2 offset-s10">Dodaj zadanie</button>
 		<button class="btn col s2 offset-s10">Zakończ</button>
 	</div>
@@ -44,8 +45,8 @@
 	<footer class="page-footer mt-5">
 		<div class="footer-copyright">
 			<div class="container">
-				{{ getFooter() }}
-				{{ footer2 }}
+				{{ getDate() | date: 'yyyy' }}{{ getFooter() }}
+				{{ footer2 | uppercase }}
 			</div>
 		</div>
 	</footer>

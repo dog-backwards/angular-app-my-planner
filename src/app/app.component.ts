@@ -10,11 +10,18 @@ export class AppComponent {
 
 // Metoda Angulara
   getFooter(): string {
-    return '2020 © MyPlanner application.';
+    return '© MyPlanner application.';
   }
 
 // Metoda Typescript
   get footer2(): string {
     return 'Created by Patryk Pesta. All rights reserved';
   }
+
+  // Metoda + pipe z parametrem modyfikujacym wyświetlanie daty
+  getDate(): Date{
+    return new Date();
+  }
+
 }
+
