@@ -4,11 +4,12 @@
 
 .mt-5 {
   margin-top: 5px;
-  background-color: #8EE4AF;
+  background-color: #2386AC;
 }
 
 .mt-5 .container {
-background-color: #8EE4AF;
+background-color: #2386AC;
+color: white;
 }
 
 .done {
@@ -31,24 +32,24 @@ input[type='date'].disabled::-webkit-inner-spin-button {
   background-color: white;
   color: #05386B;
   border-style: solid;
-  border-color: #379683;
+  border-color: #2386AC;
   position: centered;
   margin-top: 50px;
 }
 
 .nav-wrapper {
-  background-color: #8EE4AF;
-  font-family: Andale Mono, monospace;
-  color: #05386B;
+  background-color: #2386AC;
+  font-family: cursive, monospace;
+  color: white;
 }
 
 .brand-logo {
-  color: #379683;
+  color: white;
 }
 
 .btn {
-  background-color: #8EE4AF;
-  color: #379683;
+  background-color: #2386AC;
+  color: white;
 }
 
 .row {
