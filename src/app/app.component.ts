@@ -1,29 +1,43 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
+import { Task } from "./task";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.css"]
 })
 export class AppComponent {
-  title = 'MyPlanner';
+  title = "MyPlanner";
+  tasks: Task[] = [
+    {
+      name: "Nauka Angulara",
+      deadline: "2021/05/01",
+      done: false
+    },
+    {
+      name: "Obejrzenie Wikingów do końca",
+      deadline: "2021/04/10",
+      done: false
+    },
+    {
+      name: "Seans Cobra Kai",
+      deadline: "2021/02/15",
+      done: true
+    }
+  ];
 
-// Metoda Angulara
+  // Metoda Angulara
   getFooter(): string {
-    return '© MyPlanner application.';
+    return "© MyPlanner application.";
   }
 
-// Metoda Typescript
+  // Metoda Typescript
   get footer2(): string {
-    return 'Created by Patryk Pesta. All rights reserved';
+    return "Created by Patryk Pesta. All rights reserved";
   }
 
   // Metoda + pipe z parametrem modyfikujacym wyświetlanie daty
-  getDate(): Date{
+  getDate(): Date {
     return new Date();
   }
-
-  
-
 }
-
