@@ -18,7 +18,7 @@ export class AppComponent {
       name: "Obejrzenie Wikingów do końca",
       deadline: "2021/04/10",
       done: false
-    }
+    },
     {
       name: "Seans Cobra Kai",
       deadline: "2021/02/15",
