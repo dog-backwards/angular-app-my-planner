@@ -40,4 +40,12 @@ export class AppComponent {
   getDate(): Date {
     return new Date();
   }
+
+// Metoda czyszcząca listę zadań  
+clearTasks() {
+  this.tasks = [];
 }
+
+}
+
+
