@@ -41,11 +41,13 @@ export class AppComponent {
     return new Date();
   }
 
-// Metoda czyszcząca listę zadań  
-clearTasks() {
-  this.tasks = [];
+  // Metoda czyszcząca listę zadań  / można tylko tasks = [] w htmlu zamiast clearTasks
+  clearTasks() {
+    this.tasks = [];
+  }
+
+  // Metoda uruchamiana gdy wpisujemy coś w pole tekstowe
+  onKeyUp(event: KeyboardEvent) {
+    const target = event.target as HTMLInputElement; // as HTMLInputElement - rzutowanie typu
+  }
 }
-
-}
-
-
