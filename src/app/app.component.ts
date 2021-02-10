@@ -8,6 +8,7 @@ import { Task } from "./task";
 })
 export class AppComponent {
   title = "MyPlanner";
+  taskName: string;
   tasks: Task[] = [
     {
       name: "Nauka Angulara",
@@ -49,5 +50,16 @@ export class AppComponent {
   // Metoda uruchamiana gdy wpisujemy coś w pole tekstowe
   onKeyUp(event: KeyboardEvent) {
     const target = event.target as HTMLInputElement; // as HTMLInputElement - rzutowanie typu
+    this.taskName = target.value; // Pobierana wartość z pola tekstowego (value) z property target jest przypisywana do pola taskName
+  }
+
+  // Metoda dodaje zadanie do listy zadań
+  createTask() {
+    const task: Task = {
+      name: this.taskName,
+      deadline: "2021-02-10",
+      done: false
+    };
+    this.tasks.push(task);
   }
 }
