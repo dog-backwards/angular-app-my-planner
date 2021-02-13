@@ -12,16 +12,18 @@
 	</div>
 
 	<div class="row">
-		<!-- $event-przechwytywanie obiektu z eventu -->
+		<!-- $event-przechwytywanie obiektu z eventu - zamiast #nameInput - (keyup)="onKeyUp($event)" -->
+		<!-- #nazwa - referencja do obiektu DOM , event przechwycenie obiektu; '' - event dodania pustego stringa (czyszczenie tekstu)-->
 		<input
       class="col s8"
       type="text"
       placeholder="Dodaj zadanie i datę wykonania"
-      (keyup)="onKeyUp($event)"
+      #nameInput
     />
 		<input class="col s2 disabled" type="date" />
 		<!-- Event click i Wywołanie metody na przycisku '+' -->
-		<button class="btn-floating" (click)="createTask()">+</button>
+		<button class="btn-floating"
+    (click)="createTask(nameInput.value); nameInput.value = ''">+</button>
 	</div>
 
 	<ul class="collection">
