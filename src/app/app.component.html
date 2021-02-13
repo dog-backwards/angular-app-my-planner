@@ -12,18 +12,25 @@
 	</div>
 
 	<div class="row">
+		<!-- $event-przechwytywanie obiektu z eventu - zamiast #nameInput - (keyup)="onKeyUp($event)" -->
+		<!-- #nazwa - referencja do obiektu DOM , event przechwycenie obiektu; '' - event dodania pustego stringa (czyszczenie tekstu)-->
 		<input
       class="col s8"
       type="text"
       placeholder="Dodaj zadanie i datę wykonania"
+      #nameInput
     />
 		<input class="col s2 disabled" type="date" />
-		<button class="btn-floating">+</button>
+		<!-- Event click i Wywołanie metody na przycisku '+' -->
+		<button class="btn-floating"
+    (click)="createTask(nameInput.value); nameInput.value = ''">+</button>
 	</div>
 
 	<ul class="collection">
 		<li class="collection-item row" *ngFor="let task of tasks; let i = index">
-			<span class="col s10">{{ i + 1 }}. {{ task.name }} - {{ task.deadline | date: 'd.MM.EEEE':'':'pl' }}</span>
+			<span class="col s10"
+        >{{ i + 1 }}. {{ task.name }} - {{ task.deadline | date:
+        'd.MM.EEEE':'':'pl' }}</span>
 			<div class="col s2 right-align">
 				<button class="btn-floating btn-small red">
           <i class="material-icons">remove</i>
@@ -40,13 +47,14 @@
 
 	<h1>Dzisiaj brak zadań :-)</h1>
 
-	<button class="btn red">Wyczyść</button>
+	<!-- Metoda czyszcząca listę zadań na przycisku -->
+	<button class="btn red" (click)="clearTasks()">Wyczyść</button>
 
 	<footer class="page-footer mt-5">
 		<div class="footer-copyright">
 			<div class="container">
-				{{ getDate() | date: 'yyyy' }}{{ getFooter() }}
-				{{ footer2 | uppercase }}
+				{{ getDate() | date: 'yyyy' }}{{ getFooter() }} {{ footer2 | uppercase
+        }}
 			</div>
 		</div>
 	</footer>
