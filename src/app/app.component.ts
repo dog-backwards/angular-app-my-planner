@@ -65,10 +65,10 @@ export class AppComponent {
     this.tasks.push(task);
   }
   */
-  createTask(name: string) {
+  createTask(name: string, deadline: string) {
     const task: Task = {
       name, // zamiast name: name,
-      deadline: "2021-02-10",
+      deadline,
       done: false
     };
     this.tasks.push(task);
