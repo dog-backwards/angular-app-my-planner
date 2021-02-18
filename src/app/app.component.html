@@ -21,13 +21,13 @@
       (keyup)="0"
       #nameInput
     />
-		<input class="col s2 disabled" type="date" #dateInput />
+		<input class="col s2 disabled" type="date" (change)="0" #dateInput />
 		<!-- Event click i Wywołanie metody na przycisku '+' -->
 		<button
       class="btn-floating"
       (click)="createTask(nameInput.value, dateInput.value); nameInput.value = '';
       dateInput.value = ''"
-      [disabled]="nameInput.value === ''"
+      [disabled]="nameInput.value === '' || dateInput.value === ''"
     >
       +
     </button>
